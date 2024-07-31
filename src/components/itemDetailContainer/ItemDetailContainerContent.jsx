@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import "../../styles/Item_detail/Item_detail.css";
+import ItemCount from "../itemCount/ItemCount";
 
-const ItemDetailContainerContent = ({ products }) => {
+const ItemDetailContainerContent = ({ products, addToCart }) => {
   return (
     <div id="main_detail_box">
       {products.map((product) => {
@@ -23,6 +24,7 @@ const ItemDetailContainerContent = ({ products }) => {
                 <p id="rating">rating: {product.rating.rate}</p>
               </div>
             </div>
+            <ItemCount addToCart={addToCart} />
           </div>
         );
       })}
