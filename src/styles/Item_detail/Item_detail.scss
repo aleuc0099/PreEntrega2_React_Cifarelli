@@ -1,7 +1,9 @@
 #product_box {
   display: grid;
   grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 400px 60px;
   #product_img {
+    height: 400px;
     width: 100%;
   }
   #product_text {

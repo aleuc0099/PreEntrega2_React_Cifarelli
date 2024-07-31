@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import "../../styles/Item_count/Item_count.css"
 const ItemCountContent = ({counter, setCounter, addToCart}) => {
   const addCounter = () => {
     setCounter(counter + 1);
@@ -11,11 +12,13 @@ const ItemCountContent = ({counter, setCounter, addToCart}) => {
   };
 
   return (
-    <div>
+    <div id="itemCountMain">
+    <div id="itemCountBox">
       <button onClick={substCounter}>-</button>
       <p id="counter_p">{counter}</p>
       <button onClick={addCounter}>+</button>
       <button onClick={()=> addToCart(counter)}>Add to Cart</button>
+    </div>
     </div>
   );
 };
