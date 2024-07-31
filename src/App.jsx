@@ -4,6 +4,8 @@ import ItemListContainer from "./components/itemListContainer/ItemListContainer.
 import "./styles/App_styles/App.css";
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
+import CartDetail from "./components/cartDetail/CartDetail.jsx";
+import ErrorPage from "./components/errorPage/ErrorPage.jsx";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/categories/:category" element={<ItemListContainer />} />
           <Route path="/detail/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<CartDetail />} />
+          <Route path="*" element={<ErrorPage/>} />
         </Routes>
       </CartProvider>
     </BrowserRouter>
