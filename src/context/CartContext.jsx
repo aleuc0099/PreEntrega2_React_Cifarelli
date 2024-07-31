@@ -31,10 +31,7 @@ const CartProvider = ({ children }) => {
   };
 
   const totalQuantity = () => {
-    let quantity;
-    if (cart.length > 0) {
-      quantity = cart.reduce((total, product) => total + product.quantity, 0);
-    }
+    const quantity = cart.reduce((total, product) => total + product.quantity, 0);
     return quantity;
   };
 

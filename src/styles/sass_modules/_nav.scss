@@ -3,7 +3,7 @@
   background-color: $color8;
   #main_nav {
     display: grid;
-    grid-template-columns: 25% 65% 10%;
+    grid-template-columns: 25% 60% 15%;
     grid-template-rows: 80px;
     align-items: center;
     #logo_col {
@@ -63,12 +63,17 @@
       justify-content: center;
       text-align: center;
       #cart_button {
+        width: fit-content;
         padding: 10px;
+        display: flex;
         color: #000;
         border-radius: 10px;
         background-color: $color5;
         text-transform: uppercase;
         font-size: 25px;
+        #quantity_p{
+          margin-left: 8px;
+        }
       }
     }
   }

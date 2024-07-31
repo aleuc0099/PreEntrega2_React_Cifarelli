@@ -1,13 +1,15 @@
 #itemCountMain {
-  width: 100%;
   margin-top: 10px;
+  grid-area: a3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   #itemCountBox {
+    width: 50%;
     display: flex;
-    justify-self: end;
-    align-self: center;
     justify-content: space-between;
     font-size: 40px;
-    button{
+    button {
       font-size: 40px;
     }
   }

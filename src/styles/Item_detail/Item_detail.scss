@@ -2,11 +2,14 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 400px 60px;
+  grid-template-areas: "a1 a2" "a3 a3";
   #product_img {
     height: 400px;
     width: 100%;
+    grid-area: a1;
   }
   #product_text {
+    grid-area: a2;
     display: flex;
     flex-flow: column;
     justify-content: space-between;

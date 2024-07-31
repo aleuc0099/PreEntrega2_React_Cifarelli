@@ -6,14 +6,16 @@ import { CartContext } from "../../context/CartContext";
 
 const ItemDetailContainer = () => {
   const [products, set_products] = useState([]);
-
+  
   const { id } = useParams();
 
   const { addProduct } = useContext(CartContext);
 
   const addToCart = (counter) => {
+    const [ myProduct ] = products;
+    console.log(myProduct);
     const cartProduct = {
-      ...products,
+      ...myProduct,
       quantity: counter,
     };
     addProduct(cartProduct);
