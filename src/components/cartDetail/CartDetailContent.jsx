@@ -4,9 +4,8 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import "../../styles/Cart_detail/Cart_detail.css";
 
-const CartDetailContent = ({ cart }) => {
-  const { totalPrice, eraseProductById } = useContext(CartContext);
-  const price = totalPrice();
+const CartDetailContent = () => {
+  const { cart, totalPrice, eraseProductById, emptyCart } = useContext(CartContext);
   if (cart.lenght < 1) {
     return (
       <div>
@@ -15,6 +14,7 @@ const CartDetailContent = ({ cart }) => {
       </div>
     );
   }
+  const price = totalPrice();
   return (
     <div id="main_cart_box">
       <div id="cart_header_box">
@@ -31,13 +31,18 @@ const CartDetailContent = ({ cart }) => {
           <p id="unitary_price_p">
             Price ${cartProduct.price * cartProduct.quantity}
           </p>
-          <button id="eraser_btn" onClick={() => eraseProductById(cartProduct.id)}>
+          <button
+            id="eraser_btn"
+            onClick={() => eraseProductById(cartProduct.id)}
+          >
             Erase Product
           </button>
         </div>
       ))}
       <div id="empty_cart_btn_box">
-      <button id="empty_cart_btn">Empty Cart</button>
+        <button onClick={() => emptyCart()} id="empty_cart_btn">
+          Empty Cart
+        </button>
       </div>
       <p id="total_price_p">Total Price: ${price}</p>
     </div>
