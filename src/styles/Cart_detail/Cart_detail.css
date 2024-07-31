@@ -1,0 +1,15 @@
+#main_cart_box {
+  padding: 0 35px;
+}
+#main_cart_box #cart_box {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main_cart_box #cart_box #product_title {
+  font-size: 25px;
+}
+#main_cart_box #cart_box #product_image {
+  height: 100px;
+}/*# sourceMappingURL=Cart_detail.css.map */
