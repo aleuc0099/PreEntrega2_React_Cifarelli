@@ -1,20 +1,22 @@
-import cheeseburger from "../images/cheeseburger.jpg";
-import oklahoma from "../images/OKONIONBURGERS.jpg";
-import pancho from "../images/superpancho.jpg";
-import burrito from "../images/burrito.jpg";
-import salsa from "../images/salsa.jpg";
-import meatball from "../images/meatball.jpg";
-import ravioli from "../images/ravioli.jpg";
-import pizza from "../images/pizza.jpg";
-import spring from "../images/spring.png";
-import rice from "../images/rice.jpg";
-import china from "../images/china.jpg";
-import chancho from "../images/chancho.jpg";
-import soup from "../images/soup.jpg";
-import locro from "../images/locro.jpg";
-import empanada from "../images/empanada.jpg";
-import empanadas from "../images/empanadas.jpg";
-import asado from "../images/asado.jpg";
+const cheeseburger = "../assets/images/cheeseburger.jpg";
+const oklahoma = "../assets/images/OKONIONBURGERS.jpg";
+const pancho = "../assets/images/superpancho.jpg";
+const burrito = "../assets/images/burrito.jpg";
+const salsa = "../assets/images/salsa.jpg";
+const meatball = "../assets/images/meatball.jpg";
+const ravioli = "../assets/images/ravioli.jpg";
+const pizza = "../assets/images/pizza.jpg";
+const spring = "../assets/images/spring.png";
+const rice = "../assets/images/rice.jpg";
+const china = "../assets/images/china.jpg";
+const chancho = "../assets/images/chancho.jpg";
+const soup = "../assets/images/soup.jpg";
+const locro = "../assets/images/locro.jpg";
+const empanada = "../assets/images/empanada.jpg";
+const empanadas = "../assets/images/empanadas.jpg";
+const asado = "../assets/images/asado.jpg";
+import db from "../db/db.js";
+import { addDoc, collection } from "firebase/firestore";
 
 const my_products = [
   {
@@ -235,13 +237,13 @@ const my_products = [
   },
 ];
 
-const obtain_product = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(my_products);
-    }, 2000);
+const seedProducts = () => {
+  // eslint-disable-next-line no-unused-vars
+  my_products.map(({ id, ...rest }) => {
+    const productsRef = collection(db, "products");
+    addDoc(productsRef, rest);
   });
+  return
 };
 
-export { obtain_product };
-export { my_products };
+seedProducts();
