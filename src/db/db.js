@@ -15,3 +15,16 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
 
 export default db;
+
+  // const getProducts = () => {
+  //   const productsRef = collection(db, "products");
+  //   getDocs(productsRef).then((answer) => {
+  //     answer.docs.map((product) => {
+  //       return { id: product.id };
+  //     });
+  //   });
+  // };
+
+  // useEffect(() => {
+  //   getProducts();
+  // }, [category]);
