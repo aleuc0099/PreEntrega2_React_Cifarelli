@@ -54,8 +54,6 @@ const CartProvider = ({ children }) => {
     setCart(filteredProducts);
   };
 
-  console.log(cart);
-
   return (
     <CartContext.Provider
       value={{

@@ -14,7 +14,6 @@ const ItemListContainerContent = ({ products }) => {
           >
             <div id="img_box">
               <img id="product_img" src={product.image} alt={product.title} />
-              {console.log(product.image)}
             </div>
             <div id="product_txt">
               <h4 id="product_name">{product.title}</h4>
