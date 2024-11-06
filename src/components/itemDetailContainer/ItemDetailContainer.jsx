@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
     const docRef = doc(db, "products", id);
     getDoc(docRef).then((answer) => {
       const data = { id: answer.id, ...answer.data() };
-      set_products(data);
+      set_products((prevProducts)=> [...prevProducts, data]);
       console.log(data);
       console.log(products);
     });
