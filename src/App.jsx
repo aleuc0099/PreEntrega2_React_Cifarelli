@@ -5,6 +5,7 @@ import "./styles/App_styles/App.css";
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
 import CartDetail from "./components/cartDetail/CartDetail.jsx";
+import PurchasePage from "./components/purchasePage/PurchasePage.jsx";
 import ErrorPage from "./components/errorPage/ErrorPage.jsx";
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
           <Route path="/categories/:category" element={<ItemListContainer />} />
           <Route path="/detail/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartDetail />} />
-          <Route path="*" element={<ErrorPage/>} />
+          <Route path="/your_purchase" element={<PurchasePage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </CartProvider>
     </BrowserRouter>

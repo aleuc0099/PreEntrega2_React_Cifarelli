@@ -48,7 +48,10 @@ const CartDetailContent = () => {
         </div>
         <p id="total_price_p">Total Price: ${price}</p>
         <div id="finish_purchase_btn_box">
-          <button>Finish Purchase</button>
+          {/*todo: Add new function! */}
+          <Link to={"/your_purchase"} id="finish_purchase_btn">
+            Finish Purchase
+          </Link>
         </div>
       </div>
     );
