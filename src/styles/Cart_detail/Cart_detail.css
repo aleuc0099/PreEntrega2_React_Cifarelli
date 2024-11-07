@@ -46,4 +46,17 @@
   text-align: center;
   font-size: 25px;
   background-color: rgb(255, 255, 133);
+}
+#main_cart_box #finish_purchase_btn_box {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+#main_cart_box #finish_purchase_btn_box #finish_purchase_btn {
+  width: 200px;
+  color: black;
+  background-color: buttonface;
+  border-radius: 30px;
+  font-size: 25px;
+  text-align: center;
 }/*# sourceMappingURL=Cart_detail.css.map */
